@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "cardofvolonteers"
-include ':app'
+rootProject.name = "Android-Bootcamp-2025-Frontend"
+include(":app")
+ 
