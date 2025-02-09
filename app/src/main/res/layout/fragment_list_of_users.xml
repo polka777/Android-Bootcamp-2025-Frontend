@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UsersListFragment"
+    tools:context=".ui.list.UsersListFragment"
     >
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle"
+        android:id="@+id/users_recycle"
         tools:listitem="@layout/card_of_user"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

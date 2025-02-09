@@ -3,16 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/list_of_users">
+    app:startDestination="@id/mainPageFragment">
 
     <fragment
         android:id="@+id/list_of_users"
-        android:name="com.example.cardofvolonteers.UsersListFragment"
+        android:name="com.example.cardofvolonteers.ui.list.UsersListFragment"
         android:label="fragment_list_of_users"
         tools:layout="@layout/fragment_list_of_users" />
     <fragment
         android:id="@+id/user_card"
-        android:name="com.example.cardofvolonteers.UserCardFragment"
+        android:name="com.example.cardofvolonteers.ui.list.UserCardFragment"
         android:label="fragment_user_card"
         tools:layout="@layout/fragment_user_card" />
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.cardofvolonteers.ui.list.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_centresListFragment"
+            app:destination="@id/centresListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/centresListFragment"
+        android:name="com.example.cardofvolonteers.ui.list.CentresListFragment"
+        android:label="fragment_centres_list"
+        tools:layout="@layout/fragment_centres_list" >
+        <action
+            android:id="@+id/action_centresListFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+    </fragment>
 </navigation>

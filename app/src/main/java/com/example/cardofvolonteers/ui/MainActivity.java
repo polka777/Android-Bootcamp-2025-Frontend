@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         NavOptions.Builder builder = new NavOptions.Builder();
         builder.setLaunchSingleTop(true);
         options = builder.build();
-        assert  navHostFragment != null;
+        assert navHostFragment != null;
         navController = navHostFragment.getNavController();
     }
 
